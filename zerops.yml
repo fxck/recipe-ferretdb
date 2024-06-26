@@ -8,6 +8,7 @@ zerops:
         - ./ferretdb
     run:
       os: ubuntu
+      base: go@1
       envVariables:
         FERRETDB_POSTGRESQL_URL: ${db_connectionString}/ferretdb
       start: ./ferretdb
