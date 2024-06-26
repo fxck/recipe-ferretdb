@@ -1,0 +1,13 @@
+zerops:
+  - setup: ferretdb
+    base: ubuntu@22.04
+    build:
+      buildCommands:
+        - curl -L -o ferretdb https://github.com/FerretDB/FerretDB/releases/download/v1.21.0/ferretdb-dev-linux-amd64
+      deployFiles:
+        - ./ferretdb
+    run:
+      envVariables:
+        FERRETDB_POSTGRESQL_URL: ${db_connectionString}/ferretdb
+      start: ./ferretdb
+    
