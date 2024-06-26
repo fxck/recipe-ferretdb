@@ -13,6 +13,6 @@ zerops:
         - port: 27017
           httpSupport: false
       envVariables:
-        FERRETDB_POSTGRESQL_URL: ${db_connectionString}/ferretdb
+        FERRETDB_POSTGRESQL_URL: ${db_connectionString}/db
       start: ./ferretdb
     
