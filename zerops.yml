@@ -7,8 +7,10 @@ zerops:
       deployFiles:
         - ./ferretdb
     run:
-      os: ubuntu
-      base: go@1
+      base: ubuntu@22.04
+      ports:
+        - port: 27017
+          httpSupport: false
       envVariables:
         FERRETDB_POSTGRESQL_URL: ${db_connectionString}/ferretdb
       start: ./ferretdb
