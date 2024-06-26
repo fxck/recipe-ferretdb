@@ -4,6 +4,7 @@ zerops:
     build:
       buildCommands:
         - curl -L -o ferretdb https://github.com/FerretDB/FerretDB/releases/download/v1.21.0/ferretdb-dev-linux-amd64
+        - chmod +x ./ferretdb
       deployFiles:
         - ./ferretdb
     run:
